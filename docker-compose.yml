@@ -1,0 +1,13 @@
+version: '3.9'
+
+services: 
+  jupyterlab-haskell:
+    image: jupyterlab-haskell
+    volumes:
+      - ./work:/home/jovyan/work:rw
+    ports: 
+      - target: 8888
+        published: 80
+        protocol: tcp
+        mode: host
+    
