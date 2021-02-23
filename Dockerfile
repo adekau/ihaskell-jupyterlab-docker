@@ -18,9 +18,6 @@ COPY --chown=jovyan IHaskell/jupyterlab-ihaskell jupyterlab-ihaskell
 
 RUN pip3 install -r requirements.txt
 RUN pip3 install jupyterlab
-RUN pip3 install jupyterlab_latex
-RUN jupyter serverextension enable --sys-prefix jupyterlab_latex
-RUN jupyter labextension install @jupyterlab/latex
 RUN ihaskell install --stack
 
 WORKDIR $HOME/ihaskell/jupyterlab-ihaskell
